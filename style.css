@@ -19,6 +19,16 @@ li {
     padding: 5px;
 }
 
+button.option {
+    margin: 5px 0;
+    
+}
+
+div#description {
+    color: wheat;
+    font-size: 25px;
+}
+
 .game-container {
     margin: 0 auto;
     background-color: rgb(48, 48, 48);
@@ -32,8 +42,13 @@ li {
 
 div#country {
     text-align: center;
-    color: white;
+    color: wheat;
     margin: 5px;
+}
+
+div#question-number-container {
+    text-align: center;
+    color: wheat;
 }
 
 button#answer {

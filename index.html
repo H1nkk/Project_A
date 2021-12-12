@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     
-    <title>Document</title>
+    <title>Тест "Страна - столица"</title>
 </head>
 <body>
     
     <div class="game-container">
-        <button id="start" onclick="startGame()">Начать игру</button> <br/>
+        <div id="description">
+            Это - игра, где Вам будет дана страна. <br>
+            По её названию нужно будет выбрать правильное название столицы из четырёх вариантов ответа. <br>
+            Всего будет 36 пар <br>
+            Чтобы начать, нажмите на кнопку снизу:
+        </div>
+        <button id="start" onclick="startGame()">Начать игру</button>
+        <div id="question-number-container"></div>
         <div id="country"></div>
 
         <div id="buttons-container">
