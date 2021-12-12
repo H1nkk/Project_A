@@ -91,7 +91,7 @@ function startGame() {
 
         let high_record = localStorage.getItem("high_record")
 
-        if (high_record != 0) {
+        if (high_record != 0 && high_record != null) {
             document.getElementById("record-container").innerHTML = "Ваш рекорд: " + high_record
             document.getElementById("record-container").setAttribute("style", "display:block")
         }
