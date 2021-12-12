@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(73, 73, 73);
+    background-image: url(src/dark-bg.png);
     font-family: "Gill Sans", sans-serif;
     font-size: 30px;
 }
@@ -11,12 +11,6 @@ button {
     color: blanchedalmond;
     padding: 10px;
 
-}
-
-li {
-    border: 2px solid rgba(0,0,0, 0.5);
-    margin: 5px 0;
-    padding: 5px;
 }
 
 button.option {
@@ -38,6 +32,7 @@ div#description {
     padding: 10px;
     position: relative;
     height: 800px;
+    border: 1px solid white;
 }
 
 div#country {
@@ -51,12 +46,6 @@ div#question-number-container {
     color: wheat;
 }
 
-button#answer {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
 
 button#start {
     margin: 0 auto;
@@ -69,6 +58,10 @@ ol#olgame {
     list-style-type: none;
 }
 
-button#option {
+button.option {
     display: block;
+    width: 250px;
+    height: 60px;
+    font-size: 25px;
+    margin: 20px auto;
 }
