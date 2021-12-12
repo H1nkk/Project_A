@@ -46,6 +46,10 @@ div#question-number-container {
     color: wheat;
 }
 
+div#record-container {
+    color: wheat;
+    text-align: center;
+}
 
 button#start {
     margin: 0 auto;

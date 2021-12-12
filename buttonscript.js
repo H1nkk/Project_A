@@ -8,7 +8,7 @@ let right_country1
 let count = 0
 let passcount = 0
 let isExisting = true
-
+let record = 0
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -58,7 +58,7 @@ firstbutton.setAttribute("style", "display:none")
 secondbutton.setAttribute("style", "display:none")
 thirdbutton.setAttribute("style", "display:none")
 fourthbutton.setAttribute("style", "display:none")
-
+document.getElementById("record-container").setAttribute("style", "display:none")
 
 function startGame() {
     
@@ -76,15 +76,24 @@ function startGame() {
 
     if (i >= -1) {
         
-        if (i == -1) { // Обнуление
+        if (i == -1) { // Обнуление и сохранение рекорда( еще не сделано )
             i = 35
             countries_1 = ["Австрия", "Албания", "Белоруссия", "Болгария", "Босния и Герцеговина", "Ватикан", "Великобритания", "Венгрия", "Германия", "Дания", "Ирландия", "Исландия", "Испания", "Италия", "Кипр", "Латвия", "Литва", "Люксембург", "Македония", "Молдова", "Нидерланды", "Норвегия", "Польша", "Португалия", "Румыния", "Сербия", "Словакия", "Словения", "Украина", "Франция", "Хорватия", "Черногория", "Чехия", "Швейцария", "Швеция", "Эстония"] // будут уменьшаться
             capitals_1 =  ["Вена", "Тирана", "Минск", "София", "Сараево", "Ватикан", "Лондон", "Будапешт", "Берлин", "Копенгаген", "Дублин", "Рейкьявик", "Мадрид", "Рим", "Никосия", "Рига", "Вильнюс", "Люксембург", "Скопье", "Кишинёв", "Амстердам", "Осло", "Варшава", "Лиссабон", "Бухарест", "Белград", "Братислава", "Любляна", "Киев", "Париж", "Загреб", "Подгорица", "Прага", "Берн", "Стокгольм", "Таллин"] // будут уменьшаться
             alert("Игра началась заново! \n" + "Правильных ответов: " + count)
 
+            record = Math.max(record, count)
+            localStorage.setItem("high_record", record)
 
             count = 0
-            passcount = 0
+            
+        }
+
+        let high_record = localStorage.getItem("high_record")
+
+        if (high_record != 0) {
+            document.getElementById("record-container").innerHTML = "Ваш рекорд: " + high_record
+            document.getElementById("record-container").setAttribute("style", "display:block")
         }
 
         question_number_container.innerHTML = `Вопрос ${36 - i} из 36.`
