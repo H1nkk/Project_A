@@ -61,7 +61,6 @@ fourthbutton.setAttribute("style", "display:none")
 document.getElementById("record-container").setAttribute("style", "display:none")
 
 function startGame() {
-    
     if (isExisting) {
         document.getElementById("description").remove()
         document.getElementById("start").remove()
@@ -95,6 +94,8 @@ function startGame() {
             document.getElementById("record-container").innerHTML = "Ваш рекорд: " + high_record
             document.getElementById("record-container").setAttribute("style", "display:block")
         }
+
+        console.log(high_record)
 
         question_number_container.innerHTML = `Вопрос ${36 - i} из 36.`
 
