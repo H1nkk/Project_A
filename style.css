@@ -69,3 +69,8 @@ button.option {
     font-size: 25px;
     margin: 20px auto;
 }
+
+button:active {
+    border: solid 5px rgb(73, 73, 73);
+    background-color: rgb(26, 26, 26);
+}
